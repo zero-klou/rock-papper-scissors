@@ -7,22 +7,15 @@ function getComputerChoice() {
 function getHumanChoice() {
 	let humanChoice;
 
-	function checkPrompt() {
-		if (
-			humanChoice === "" ||
-			humanChoice === null ||
-			!["0", "1", "2"].includes(humanChoice)
-		)
-			return true;
-
-		return false;
-	}
-
 	do {
 		humanChoice = prompt(
 			'Enter\n0: "rock",\n1: "papper" or\n2: "scissors"'
 		);
-	} while (checkPrompt());
+	} while (
+		humanChoice === "" ||
+		humanChoice === null ||
+		!["0", "1", "2"].includes(humanChoice)
+	);
 
 	return +humanChoice;
 }
@@ -41,7 +34,7 @@ function playGame() {
 				return `Draw, you and computer choice ${values[humanChoice]}`;
 
 			case -1:
-			case humanChoice:
+			case 2:
 				scores.computer += 1;
 				return `You lose, ${values[computerChoice]} beats ${values[humanChoice]}`;
 
@@ -56,7 +49,7 @@ function playGame() {
 	}
 
 	if (scores.computer > scores.player) {
-		console.log("Computer lose :c");
+		console.log("You lose :c");
 	} else if (scores.computer < scores.player) {
 		console.log("You win!");
 	} else {
