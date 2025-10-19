@@ -4,8 +4,47 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<script src="script.js 	"></script>
+		<div class="container">
+			<h1 class="game-res">Game result: <span></span></h1>
+			<div class="rounds-res">
+				<h2>Round results:</h2>
+				<div class="round" id="1"></div>
+				<div class="round" id="2"></div>
+				<div class="round" id="3"></div>
+				<div class="round" id="4"></div>
+				<div class="round" id="5"></div>
+			</div>
+			<div class="play-buttons">
+				<button class="button">
+					<img
+						class="button-img"
+						data-value="0"
+						src="img/rock-svgrepo-com.svg"
+						alt="Rock"
+					/>
+				</button>
+				<button class="button" data-value="1">
+					<img
+						class="button-img"
+						data-value="1"
+						src="img/blank-document-svgrepo-com.svg"
+						alt="Papper"
+					/>
+				</button>
+				<button class="button" data-value="2">
+					<img
+						class="button-img"
+						data-value="2"
+						src="img/scissors-svgrepo-com.svg"
+						alt="Scissors"
+					/>
+				</button>
+			</div>
+		</div>
+
+		<script src="./script.js"></script>
 	</body>
 </html>

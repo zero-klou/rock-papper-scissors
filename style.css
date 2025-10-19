@@ -1,0 +1,67 @@
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: grey;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+.container {
+	margin: 0 auto;
+	width: 800px;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 10px 20px;
+}
+
+.game-res {
+	font-size: 32px;
+	line-height: 1.5;
+	min-height: 80px;
+}
+
+.game-res span {
+	font-weight: normal;
+}
+
+.rounds-res {
+	display: flex;
+	gap: 12px;
+}
+
+.round {
+	width: 24px;
+	height: 24px;
+	border: 1px solid #000;
+	border-radius: 8px;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.play-buttons {
+	display: flex;
+	gap: 24px;
+	margin-top: 12px;
+}
+
+.button {
+	border-radius: 8px;
+}
+
+.button img {
+	width: 128px;
+}
